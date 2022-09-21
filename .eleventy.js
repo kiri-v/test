@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
-      zone: "Europe/Paris",
+      zone: "America/Toronto",
     })
       .setLocale("en")
       .toLocaleString(DateTime.DATE_FULL);
