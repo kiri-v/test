@@ -10,9 +10,6 @@ This starter will help you build a relatively simple blog with a few key feature
 
 This eleventy starter already includes:
 - Basic site navigation with eleventy-navigation
-- Blog categories & category based navigation
-- Image optimisation with Eleventy-img
-- SVG icons with svg-icon-sprite
 - SEO (sitemap, metadata, robots.txt)
 - RSS feed
 - Luxon for handling dates & times
