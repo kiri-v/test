@@ -1,0 +1,172 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  background-color: $bg-clr;
+  color: $base-clr;
+  font-family: $main-font;
+  // font-size: 50%;
+  scroll-behavior: smooth;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // font-size: 2.25rem;
+  height: 100vh;
+  line-height: 140%;
+  min-width: 320px;
+  // margin: 0 5em 0 1.5em;
+
+  footer {
+    justify-self: flex-end;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $accent-font;
+  line-height: 110%;
+  margin: 0 0 0.7em 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  color: $link-clr;
+  transition: color 400ms;
+
+  &:hover {
+    color: $link-hvr-clr;
+  }
+}
+
+p {
+  max-width: 900px;
+  + p {
+    margin-top: 1.5rem;
+  } 
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
+}
+
+main {
+  flex: 0 1 100%;
+  padding: 2em 1em;
+  max-width: 900px;
+  margin: auto;
+
+  &:not(nav) {
+    ul {
+      margin: .7em 0 .7em 1em;
+    }
+  }
+
+  nav {
+    span {
+      // font-size: 2.2rem;
+      font-weight: 600;
+      width: fit-content;
+    }
+  }
+
+  nav ul {
+    // display: flex;
+    // justify-content: flex-end;
+  }
+}
+
+header,
+main,
+footer {
+  // max-width: 1440px;
+}
+
+
+:where(header .content, footer .content) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: yellow;
+  padding: .75em 1em;
+ 
+}
+
+footer {
+  border-top: 1px solid $cat-clr;
+  padding: .5em 1em 1.2em;
+}
+
+header .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  font-weight: 600;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 2rem;
+  
+  + li {
+    margin-left: 1.2rem;
+  }
+
+  &.active a {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 400ms;
+  }
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.logo {
+  font-family: $accent-font;
+  font-weight: 700;
+  font-size: 2rem;
+  // margin-bottom: 1em;
+}
+

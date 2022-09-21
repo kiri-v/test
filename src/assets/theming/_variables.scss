@@ -1,0 +1,17 @@
+$main-font: "Gill Sans", "Trebuchet MS", "sans-serif";
+$accent-font: "Montagu Slab", serif;
+
+/* Colours */
+$light-shade: hsl(0, 0%, 95%);
+$dark-shade: hsl(0, 0%, 20%);
+$darkest-shade: darken($dark-shade, 15%);
+$accent-shade: hsl(58, 100%, 35%);
+$accent-clr: hsl(58, 100%, 50%);
+
+/*========================================*/
+
+$base-clr: $darkest-shade;
+$bg-clr: lighten($light-shade, 10%);
+$link-clr: $darkest-shade;
+$link-hvr-clr: $accent-shade;
+$cat-clr: $darkest-shade;
